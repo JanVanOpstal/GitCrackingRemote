@@ -1,0 +1,128 @@
+git init
+# maak 2 files 
+# Konijnen.txt
+# Andere dieren met 4 poten.txt
+git status
+git add "Andere dieren met 4 poten.txt"
+git add "Konijnen.txt"
+git commit -m "Eerste project setup uitgevoerd"
+# File toevoegen
+# Vissen.txt
+# Voeg Hond to als dier in de file Andere dieren
+git status
+git add .
+git status
+git commit -m "Vissen voorzien en de eerste dieren opgelijst"
+git log
+# Voeg Konijnen toe aan de konijnen file
+# Grijs blauwe gestreepte
+# Blauwe reus
+# Vlaamse reus
+git status
+git add .
+git commit -m "De eerste konijnen voorzien"
+git log
+git branch VissenVerzamelen
+git status
+git log
+git checkout VissenVerzamelen
+git log
+# Voeg de volgende vis toe aan de vissen file
+# Baars
+git status
+git add .
+git commit -m "Eerste keer gaan verzamelen"
+# Voeg de volgende vissen toe aan de vissen: Snoek, Makreel
+git add .
+git commit -m "Resultaat tweede dag"
+# Back to master
+git checkout master
+# Voeg Paard to aan Andere dieren met 4 poten
+git add .
+git commit -m "Ik ben een paard tegengekomen"
+# Klaar met vissen verzamelen
+git merge VissenVerzamelen
+git branch -d VissenVerzamelen
+# Label V1 plaatsen -> Checkout 2de commit
+git checkout !!!!!!!!!!!!
+git tag V1
+git checkout VissenVerzamelen
+git checkout V1
+git checkout VissenVerzamelen
+git tag V2
+# Pas Konijnen.txt aan, voeg Stampertje toe
+git add .
+git commit -m "Sprookjeskonijnen tellen ook"
+
+# Merge conflict example
+git checkout -b FoutenVerbeteren
+# Verbeter Blauw door Bruin in Konijnen.txt
+git add .
+git commit -m "Blauw door bruin vervangen"
+git checkout master
+# Voeg "Wit fluffy hoopje fur" toe aan Konijnen.txt
+git add .
+git commit -m "Niet nader te bepalen Konijn toegevoegd"
+# Vervang Bruine reus door Bruine gevlekte
+git add .
+git commit -m "Een Bruine reus bestaat niet"
+git merge FoutenVerbeteren
+# Pas fouten aan zodat alles weer ok is
+git add .
+git commit "Merge branch 'FoutenVerbeteren'
+
+
+# Detatched head example
+git log --graph --oneline
+git checkout !!!!!!!
+git checkout !!!!!! - last commit on master - !!!!!!
+git checkout master
+
+Als je ergens in gekomen bent waar je niet uit lijkt te geraken => :q
+
+
+
+
+################## Remote #########################
+Create a new git repository on github
+git clone https://github.com/JanVanOpstal/gitcracking.git
+# add file to the folder
+git add .
+git commit -m "added the git commands used in this repository"
+git status #You are 1 commit ahead
+git log --graph --oneline
+git push
+git status
+
+# Pas iets aan in github (andere repository), editor
+git fetch
+git status -> 1 behind
+git pull
+
+# Nieuwe branch die ineens ook getracked word extern
+# Maak de branch nieuwebranch op Github
+git fetch
+git branch
+git branch -a
+git checkout --track origin/nieuwebranch
+# van hieruit kan je steeds wisselen tussen main en nieuwebranch en per branch
+# na commit's
+git push
+# voor je begint te werken of wanneer je weet dat er aanpassingen waren remote
+git pull
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
